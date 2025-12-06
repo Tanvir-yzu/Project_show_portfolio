@@ -1,8 +1,8 @@
-# 🚀 Tanvir Mahmud - Portfolio Website
+# 🚀 Tanvir Islam- Portfolio Website
 
 A modern, responsive portfolio website built with React, showcasing my skills, projects, and experience as a Full-Stack Developer.
 
-![Portfolio Preview](https://i.postimg.cc/ZnRTbmzJ/Desktop.png)
+![Portfolio Preview](https://i.postimg.cc/kXCzVhGw/Macbook-Air-localhost.png)
 
 ![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
 ![React](https://img.shields.io/badge/React-18.2.0-blue)
@@ -19,6 +19,7 @@ A modern, responsive portfolio website built with React, showcasing my skills, p
 - 🌙 **Dark Mode** - Eye-friendly dark theme
 - ⚡ **Fast Performance** - Optimized with Vite
 - 🎯 **Smooth Scrolling** - Seamless navigation between sections
+- 🎯 **3D Visual Effects** - Enhanced depth and perspective transformations throughout the site
 
 ## 🛠️ Built With
 
@@ -102,7 +103,7 @@ The build files will be generated in the `dist` folder.
 This project is configured for easy deployment on Netlify.
 
 ### Deploy to Netlify
-- Live link- https://Tanvir-portfolio.vercel.app/
+- Live link- 
 
 ## 📧 Contact Form Setup
 
@@ -123,11 +124,11 @@ The contact form uses FormSubmit. To activate:
 
 ## 📱 Sections
 
-1. **Hero** - Introduction with animated profile image
-2. **Skills Marquee** - Scrolling banner of technologies
-3. **About** - Personal information and background
-4. **Skills** - Detailed skill cards with proficiency levels
-5. **Projects** - Interactive carousel showcasing projects
+1. **Hero** - Introduction with animated profile image and 3D effects
+2. **Skills Marquee** - Scrolling banner of technologies with depth effects
+3. **About** - Personal information and background with enhanced visuals
+4. **Skills** - Detailed skill cards with proficiency levels and 3D animations
+5. **Projects** - Interactive carousel showcasing projects with improved design
 6. **Contact** - Functional contact form with social links
 7. **Footer** - Quick links and additional information
 
@@ -163,9 +164,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Tanvir Mahmud**
 
-- GitHub: [@mahmud014](https://github.com/Tanvir-yzu)
-- LinkedIn: [Tanvirmahmud](https://www.linkedin.com/in/tanvir-yzu/)
-- Twitter: [@MdTanvirMahmud3](https://x.com/MdTanvirMahmud3)
+- GitHub: [@Tanvir-yzu](https://github.com/Tanvir-yzu)
+- LinkedIn: [Tanvir-yzu](https://www.linkedin.com/in/tanvir-yzu/)
 - Email: 2020tanvir1971@gmail.com
 
 ## 🙏 Acknowledgments
@@ -178,13 +178,13 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 📸 Screenshots
 
 ### Desktop View
-![Desktop View](https://i.postimg.cc/ZnRTbmzJ/Desktop.png)
+![Desktop View](https://i.postimg.cc/kXCzVhGw/Macbook-Air-localhost.png)
 
 ### Mobile View
-![Mobile View](https://i.postimg.cc/W1mxHyxG/Mobile.png)
+![Mobile View](https://i.postimg.cc/kXCzVhGw/Macbook-Air-localhost.png)
 
 ---
 
 ⭐ **If you like this project, please give it a star!** ⭐
 
-Made with ❤️ by Tanvir Mahmud
+Made with ❤️ by Tanvir Islam
