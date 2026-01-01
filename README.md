@@ -232,7 +232,7 @@ Feel free to use it for your own portfolio!
 
 ## 👤 Author
 
-**Tanvir Mahmud**
+**Tanvir Islam**
 
 - 🌐 [GitHub](https://github.com/Tanvir-yzu)
 - 💼 [LinkedIn](https://www.linkedin.com/in/tanvir-yzu/)
