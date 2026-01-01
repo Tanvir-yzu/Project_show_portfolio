@@ -132,7 +132,7 @@ const Contact = () => {
 
           {/* Resume Badge */}
           <motion.a 
-            href="https://drive.google.com/file/d/14caD1rlRM_QEF0NfG7xy_kat3-C9Eczm/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1rwUxRcPc-CSez_yOVXzG8ShE-YeRyXp-/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="relative w-32 h-32 mt-8 block cursor-pointer group"

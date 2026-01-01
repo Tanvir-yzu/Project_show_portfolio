@@ -1,17 +1,18 @@
 import { useState, useEffect } from 'react'
-import { MdMenu, MdClose } from 'react-icons/md'
+import { MdMenu, MdClose, MdDownload } from 'react-icons/md'
 import { motion, AnimatePresence } from 'framer-motion'
 
 function Header() {
   const [activeSection, setActiveSection] = useState('home')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' })
       setActiveSection(id)
-      setIsMobileMenuOpen(false) // Close mobile menu after clicking
+      setIsMobileMenuOpen(false)
     }
   }
 
@@ -30,181 +31,160 @@ function Header() {
           }
         }
       }
+
+      setIsScrolled(window.scrollY > 50)
     }
 
     window.addEventListener('scroll', handleScroll)
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  return (
-    <header className="w-full max-w-7xl mx-auto px-4 py-6 sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-      <nav className="flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <span className="text-2xl font-bold text-gray-900 dark:text-white">Tanvir.</span>
-        </div>
-        <div className="hidden lg:flex items-center space-x-6 text-gray-600 dark:text-gray-300">
-          <button 
-            onClick={() => scrollToSection('home')} 
-            className={`font-medium px-4 py-2 rounded-full transition-all ${
-              activeSection === 'home' 
-                ? 'bg-secondary text-primary' 
-                : 'hover:text-gray-900 dark:hover:text-white'
-            }`}
-          >
-            Home
-          </button>
-          <button 
-            onClick={() => scrollToSection('about')} 
-            className={`font-medium px-4 py-2 rounded-full transition-all ${
-              activeSection === 'about' 
-                ? 'bg-secondary text-primary' 
-                : 'hover:text-gray-900 dark:hover:text-white'
-            }`}
-          >
-            About
-          </button>
-          <button 
-            onClick={() => scrollToSection('skills')} 
-            className={`font-medium px-4 py-2 rounded-full transition-all ${
-              activeSection === 'skills' 
-                ? 'bg-secondary text-primary' 
-                : 'hover:text-gray-900 dark:hover:text-white'
-            }`}
-          >
-            Skills
-          </button>
-          <button 
-            onClick={() => scrollToSection('projects')} 
-            className={`font-medium px-4 py-2 rounded-full transition-all ${
-              activeSection === 'projects' 
-                ? 'bg-secondary text-primary' 
-                : 'hover:text-gray-900 dark:hover:text-white'
-            }`}
-          >
-            Projects
-          </button>
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className={`font-medium px-4 py-2 rounded-full transition-all ${
-              activeSection === 'contact' 
-                ? 'bg-secondary text-primary' 
-                : 'hover:text-gray-900 dark:hover:text-white'
-            }`}
-          >
-            Contact
-          </button>
-        </div>
-        <div className="flex items-center space-x-4">
-          <a className="hidden md:block bg-secondary text-primary font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-all" href="https://drive.google.com/file/d/14caD1rlRM_QEF0NfG7xy_kat3-C9Eczm/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-            Download CV
-          </a>
-          <button 
-            className="lg:hidden p-2 z-50"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <MdClose className="text-3xl text-gray-900 dark:text-white" />
-            ) : (
-              <MdMenu className="text-3xl text-gray-900 dark:text-white" />
-            )}
-          </button>
-        </div>
-      </nav>
+  const navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact']
 
-      {/* Mobile Menu - Compact Version */}
+  return (
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/90 dark:bg-primary/90 backdrop-blur-xl shadow-lg py-3' 
+        : 'bg-transparent py-6'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="flex justify-between items-center">
+          <motion.div 
+            className="flex items-center space-x-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <div className="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center">
+              <span className="text-primary font-bold text-xl">T</span>
+            </div>
+            <span className={`text-2xl font-display font-bold ${
+              isScrolled 
+                ? 'text-primary dark:text-white' 
+                : 'text-primary dark:text-white'
+            }`}>
+              Tanvir.
+            </span>
+          </motion.div>
+
+          <div className="hidden lg:flex items-center space-x-1">
+            {navItems.map((item) => (
+              <motion.button
+                key={item}
+                onClick={() => scrollToSection(item.toLowerCase())}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`relative font-medium px-5 py-2.5 rounded-xl transition-all ${
+                  activeSection === item.toLowerCase()
+                    ? 'text-primary dark:text-white'
+                    : 'text-gray-600 dark:text-gray-400'
+                }`}
+              >
+                {activeSection === item.toLowerCase() && (
+                  <motion.div
+                    layoutId="activeNav"
+                    className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-xl"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <span className="relative z-10">{item}</span>
+              </motion.button>
+            ))}
+          </div>
+
+          <div className="flex items-center space-x-4">
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="hidden md:flex items-center gap-2 bg-gradient-to-r from-secondary to-accent text-primary font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all"
+              href="https://drive.google.com/file/d/1rwUxRcPc-CSez_yOVXzG8ShE-YeRyXp-/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MdDownload className="text-lg" />
+              Download CV
+            </motion.a>
+
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="lg:hidden p-2.5 rounded-xl bg-gray-100 dark:bg-white/10"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <MdClose className={`text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
+              ) : (
+                <MdMenu className={`text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
+              )}
+            </motion.button>
+          </div>
+        </nav>
+      </div>
+
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed top-20 left-4 right-4 bg-primary/95 backdrop-blur-lg rounded-2xl shadow-2xl z-40 lg:hidden p-4"
-          >
-            <div className="flex flex-col space-y-2">
-              <motion.button
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.05 }}
-                onClick={() => scrollToSection('home')}
-                className={`text-base font-medium px-4 py-2 rounded-lg transition-all text-left ${
-                  activeSection === 'home'
-                    ? 'bg-secondary text-primary'
-                    : 'text-white hover:bg-secondary/20'
-                }`}
-              >
-                Home
-              </motion.button>
-              <motion.button
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 }}
-                onClick={() => scrollToSection('about')}
-                className={`text-base font-medium px-4 py-2 rounded-lg transition-all text-left ${
-                  activeSection === 'about'
-                    ? 'bg-secondary text-primary'
-                    : 'text-white hover:bg-secondary/20'
-                }`}
-              >
-                About
-              </motion.button>
-              <motion.button
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.15 }}
-                onClick={() => scrollToSection('skills')}
-                className={`text-base font-medium px-4 py-2 rounded-lg transition-all text-left ${
-                  activeSection === 'skills'
-                    ? 'bg-secondary text-primary'
-                    : 'text-white hover:bg-secondary/20'
-                }`}
-              >
-                Skills
-              </motion.button>
-              <motion.button
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-                onClick={() => scrollToSection('projects')}
-                className={`text-base font-medium px-4 py-2 rounded-lg transition-all text-left ${
-                  activeSection === 'projects'
-                    ? 'bg-secondary text-primary'
-                    : 'text-white hover:bg-secondary/20'
-                }`}
-              >
-                Projects
-              </motion.button>
-              <motion.button
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.25 }}
-                onClick={() => scrollToSection('contact')}
-                className={`text-base font-medium px-4 py-2 rounded-lg transition-all text-left ${
-                  activeSection === 'contact'
-                    ? 'bg-secondary text-primary'
-                    : 'text-white hover:bg-secondary/20'
-                }`}
-              >
-                Contact
-              </motion.button>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
-                className="pt-2 border-t border-white/20"
-              >
-                <a
-                  className="block text-center bg-secondary text-primary font-semibold px-4 py-2 rounded-lg"
-                  href="https://drive.google.com/file/d/14caD1rlRM_QEF0NfG7xy_kat3-C9Eczm/view?usp=sharing"
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, x: '100%' }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: '100%' }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 h-full w-72 bg-white dark:bg-primary shadow-2xl z-50 lg:hidden"
+            >
+              <div className="p-6">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="p-2 rounded-xl bg-gray-100 dark:bg-white/10 ml-auto flex mb-8"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <MdClose className="text-2xl text-primary dark:text-white" />
+                </motion.button>
+
+                <div className="flex flex-col space-y-2">
+                  {navItems.map((item, index) => (
+                    <motion.button
+                      key={item}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      onClick={() => scrollToSection(item.toLowerCase())}
+                      className={`text-lg font-medium px-4 py-3 rounded-xl transition-all text-left ${
+                        activeSection === item.toLowerCase()
+                          ? 'bg-gradient-to-r from-secondary/20 to-accent/20 text-primary dark:text-white'
+                          : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5'
+                      }`}
+                    >
+                      {item}
+                    </motion.button>
+                  ))}
+                </div>
+
+                <motion.a
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="flex items-center justify-center gap-2 mt-8 bg-gradient-to-r from-secondary to-accent text-primary font-semibold px-6 py-3 rounded-xl shadow-lg"
+                  href="https://drive.google.com/file/d/1rwUxRcPc-CSez_yOVXzG8ShE-YeRyXp-/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
+                  <MdDownload className="text-xl" />
                   Download CV
-                </a>
-              </motion.div>
-            </div>
-          </motion.div>
+                </motion.a>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>

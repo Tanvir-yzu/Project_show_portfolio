@@ -304,7 +304,7 @@ const About = () => {
 
             <motion.a 
               className="flex cursor-pointer items-center gap-2 bg-secondary text-primary font-semibold px-6 py-3 rounded-full shadow-lg transform-gpu" 
-              href="https://drive.google.com/file/d/14caD1rlRM_QEF0NfG7xy_kat3-C9Eczm/view?usp=sharing" 
+              href="https://drive.google.com/file/d/1rwUxRcPc-CSez_yOVXzG8ShE-YeRyXp-/view?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer"
               whileHover={{ 
