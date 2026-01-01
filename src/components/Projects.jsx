@@ -55,7 +55,7 @@ const Projects = () => {
       tech: ["Python", "Django", "JavaScripts"],
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
       github: "https://github.com/Tanvir-yzu/-Single-Vendor-E-Commerce-Project",
-      live: "https://Tanvir-portfolio.vercel.app",
+      live: "https://tanvir-islam-portfolio.netlify.app/",
       category: "Full-Stack"
     },
     {
@@ -64,7 +64,7 @@ const Projects = () => {
       tech: ["React", "Firebase", "Tailwind"],
       image: "https://i.ibb.co.com/xSgL5DWL/istockphoto-182779981-612x612.jpg",
       github: "https://github.com/Tanvir-yzu/The-Dragon-News",
-      live: "https://Tanvir-portfolio.vercel.app",
+      live: "https://tanvir-islam-portfolio.netlify.app/",
       category: "Web App"
     },
     {
@@ -82,7 +82,7 @@ const Projects = () => {
       tech: ["React", "API", "JavaScript"],
       image: "https://i.ibb.co.com/8VmT9wK/istockphoto-172446562-612x612.jpg",
       github: "https://github.com/Tanvir-yzu/DishDive-restaurant-App",
-      live: "https://Tanvir-portfolio.vercel.app",
+      live: "https://tanvir-islam-portfolio.netlify.app/",
       category: "Web App"
     },
     {
@@ -91,7 +91,7 @@ const Projects = () => {
       tech: ["React", "Chart.js", "LocalStorage"],
       image: "https://i.ibb.co.com/VcD3VCF0/istockphoto-1363270862-612x612.jpg",
       github: "https://github.com/Tanvir-yzu/Emergency-Hotline-Assignment-5",
-      live: "https://Tanvir-portfolio.vercel.app",
+      live: "https://tanvir-islam-portfolio.netlify.app/",
       category: "Utility"
     },
     {
@@ -100,7 +100,7 @@ const Projects = () => {
       tech: ["React", "Firebase", "Tailwind"],
       image: "https://i.ibb.co.com/rRPp0qfy/photo-1651055705032-d4187855b004.jpg",
       github: "https://github.com/Tanvir-yzu/mobile-payoo",
-      live: "https://mobile-payoo.vercel.app/",
+      live: "https://tanvir-islam-portfolio.netlify.app/",
       category: "Fintech"
     },
    
