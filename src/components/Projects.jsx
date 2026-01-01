@@ -41,6 +41,15 @@ const Projects = () => {
       category: "Web App"
     },
     {
+      title: "English Learning",
+      description: "Learn English with vocabulary practice and daily lessons.",
+      tech: ["Python", "Django", "Tailwind","JavaScripts"],
+      image: "https://i.postimg.cc/kGCtSbXX/Screenshot-2026-01-01-201557.png",
+      github: "https://vocavolt.com/",
+      live: "https://vocavolt.com/",
+      category: "EdTech"
+    },
+    {
       title: "E-commerce Store",
       description: "Full-stack e-commerce with shopping cart and payment integration.",
       tech: ["Python", "Django", "JavaScripts"],
@@ -94,15 +103,7 @@ const Projects = () => {
       live: "https://mobile-payoo.vercel.app/",
       category: "Fintech"
     },
-    {
-      title: "English Learning",
-      description: "Learn English with vocabulary practice and daily lessons.",
-      tech: ["React", "API", "Tailwind"],
-      image: "https://i.ibb.co.com/sdNLPPyH/istockphoto-2208643645-612x612.webp",
-      github: "https://github.com/Tanvir-yzu/English-janala-app",
-      live: "https://Tanvir-portfolio.vercel.app",
-      category: "EdTech"
-    }
+   
   ]
 
   return (
