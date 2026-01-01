@@ -17,36 +17,36 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "Personal portfolio with smooth animations and responsive design.",
       tech: ["React", "Tailwind", "Framer Motion"],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      github: "https://github.com/Tanvir-yzu/Portfolio",
+      image: "https://i.postimg.cc/1RfMBxHK/Screenshot-2026-01-01-194306.png",
+      github: "https://github.com/Tanvir-yzu/Project_show_portfolio",
       live: "https://Tanvir-portfolio.vercel.app",
       category: "Personal"
     },
     {
       title: "E-Commerce Platform",
-      description: "Simple e-commerce platform with CRUD operations and Django backend.",
+      description: " E-commerce platform with CRUD operations and Django backend.",
       tech: ["Django", "JavaScript", "Python"],
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+      image: "https://i.postimg.cc/8PCGtzYB/Screenshot-2026-01-01-194823.png",
       github: "https://github.com/Tanvir-yzu/E-Commerce_tech",
       live: "https://exceltech.com.bd/",
       category: "Full-Stack"
     },
     {
-      title: "Book App",
-      description: "Discover, read, and organize your favorite books with categories.",
-      tech: ["React", "API", "Tailwind"],
-      image: "https://i.ibb.co.com/dwYMP3NZ/istockphoto-1313532517-612x612.jpg",
-      github: "https://github.com/Tanvir-yzu/book-vibe",
-      live: "https://book-vibe-chi.vercel.app/",
+      title: "Medicine Shop",
+      description: "Online medicine store with product catalog and shopping cart.",
+      tech: ["Python", "API", "Tailwind","Django"],
+      image: "https://i.postimg.cc/t4NWNDVg/02.png",
+      github: "https://github.com/Tanvir-yzu/medicine_shop",
+      live: "https://Tanvir-portfolio.vercel.app/",
       category: "Web App"
     },
     {
       title: "E-commerce Store",
       description: "Full-stack e-commerce with shopping cart and payment integration.",
-      tech: ["React", "Node.js", "MongoDB"],
+      tech: ["Python", "Django", "JavaScripts"],
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      github: "https://github.com/Tanvir-yzu/Shoporo-next-app",
-      live: "https://shoporo-next-app.vercel.app/",
+      github: "https://github.com/Tanvir-yzu/-Single-Vendor-E-Commerce-Project",
+      live: "https://Tanvir-portfolio.vercel.app",
       category: "Full-Stack"
     },
     {
@@ -55,7 +55,7 @@ const Projects = () => {
       tech: ["React", "Firebase", "Tailwind"],
       image: "https://i.ibb.co.com/xSgL5DWL/istockphoto-182779981-612x612.jpg",
       github: "https://github.com/Tanvir-yzu/The-Dragon-News",
-      live: "https://dragon-news-37713.web.app/",
+      live: "https://Tanvir-portfolio.vercel.app",
       category: "Web App"
     },
     {
@@ -64,7 +64,7 @@ const Projects = () => {
       tech: ["React", "Firebase", "Tailwind"],
       image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
       github: "https://github.com/Tanvir-yzu/Skill-Hive",
-      live: "https://skill-hive-gold.vercel.app/",
+      live: "https://Tanvir-portfolio.vercel.app/",
       category: "EdTech"
     },
     {
@@ -73,7 +73,7 @@ const Projects = () => {
       tech: ["React", "API", "JavaScript"],
       image: "https://i.ibb.co.com/8VmT9wK/istockphoto-172446562-612x612.jpg",
       github: "https://github.com/Tanvir-yzu/DishDive-restaurant-App",
-      live: "https://dishdive-e699b.web.app/",
+      live: "https://Tanvir-portfolio.vercel.app",
       category: "Web App"
     },
     {
@@ -82,7 +82,7 @@ const Projects = () => {
       tech: ["React", "Chart.js", "LocalStorage"],
       image: "https://i.ibb.co.com/VcD3VCF0/istockphoto-1363270862-612x612.jpg",
       github: "https://github.com/Tanvir-yzu/Emergency-Hotline-Assignment-5",
-      live: "https://emergency-hotline-two.vercel.app/",
+      live: "https://Tanvir-portfolio.vercel.app",
       category: "Utility"
     },
     {
@@ -100,7 +100,7 @@ const Projects = () => {
       tech: ["React", "API", "Tailwind"],
       image: "https://i.ibb.co.com/sdNLPPyH/istockphoto-2208643645-612x612.webp",
       github: "https://github.com/Tanvir-yzu/English-janala-app",
-      live: "https://english-janala-app.vercel.app/",
+      live: "https://Tanvir-portfolio.vercel.app",
       category: "EdTech"
     }
   ]
