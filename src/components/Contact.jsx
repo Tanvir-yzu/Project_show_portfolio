@@ -283,16 +283,6 @@ const Contact = () => {
         >
           <FaLinkedin className="text-xl" />
         </motion.a>
-        <motion.a 
-          href="https://x.com/MdTanvirMahmud3" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
-          whileHover={{ scale: 1.2, backgroundColor: "#AEFF72", color: "#0D2426" }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <FaTwitter className="text-xl" />
-        </motion.a>
       </motion.div>
     </section>
   )
