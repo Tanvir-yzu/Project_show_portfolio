@@ -19,7 +19,7 @@ const Projects = () => {
       tech: ["React", "Tailwind", "Framer Motion"],
       image: "https://i.postimg.cc/1RfMBxHK/Screenshot-2026-01-01-194306.png",
       github: "https://github.com/Tanvir-yzu/Project_show_portfolio",
-      live: "https://Tanvir-portfolio.vercel.app",
+      live: "https://tanvir-islam-portfolio.netlify.app/",
       category: "Personal"
     },
     {
@@ -37,7 +37,7 @@ const Projects = () => {
       tech: ["Python", "API", "Tailwind","Django"],
       image: "https://i.postimg.cc/t4NWNDVg/02.png",
       github: "https://github.com/Tanvir-yzu/medicine_shop",
-      live: "https://Tanvir-portfolio.vercel.app/",
+      live: "https://tanvir-islam-portfolio.netlify.app/",
       category: "Web App"
     },
     {
@@ -73,7 +73,7 @@ const Projects = () => {
       tech: ["React", "Firebase", "Tailwind"],
       image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
       github: "https://github.com/Tanvir-yzu/Skill-Hive",
-      live: "https://Tanvir-portfolio.vercel.app/",
+      live: "https://tanvir-islam-portfolio.netlify.app/",
       category: "EdTech"
     },
     {
