@@ -326,7 +326,7 @@ function Hero() {
                 }}
               >
                 <div className="text-center">
-                  <p className="text-2xl md:text-3xl font-bold">1+</p>
+                  <p className="text-2xl md:text-3xl font-bold">2.5+</p>
                   <p className="text-xs font-medium opacity-90">Years Exp</p>
                 </div>
               </motion.div>

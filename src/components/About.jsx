@@ -297,7 +297,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.9, type: "spring" }}
                 style={{ transform: "translateZ(20px)" }}
               >
-                1+
+                2.5+
               </motion.p>
               <p className="text-gray-600 dark:text-gray-400 font-medium mt-2">Years Experience</p>
             </motion.div>

@@ -1,106 +1,106 @@
 import Marquee from "react-fast-marquee"
-import { FaPython, FaNodeJs, FaHtml5, FaGitAlt, FaWordpress } from "react-icons/fa"
-import { SiTailwindcss, SiMongodb, SiJavascript, SiNextdotjs, SiDaisyui, SiExpress } from "react-icons/si"
+import { FaPython, FaNodeJs, FaHtml5, FaGitAlt, FaReact, FaDatabase } from "react-icons/fa"
+import { SiTailwindcss, SiMongodb, SiJavascript, SiNextdotjs, SiTypescript, SiPostgresql, SiRedis, SiExpress, SiDocker } from "react-icons/si"
 
 const SkillsMarquee = () => {
   const skills = [
-    { name: "Python", icon: <FaPython className="text-3xl" /> },
-    { name: "NEXT.JS", icon: <SiNextdotjs className="text-3xl" /> },
-    { name: "NODE.JS", icon: <FaNodeJs className="text-3xl" /> },
-    { name: "MONGODB", icon: <SiMongodb className="text-3xl" /> },
-    { name: "TAILWIND CSS", icon: <SiTailwindcss className="text-3xl" /> },
-    { name: "DAISY UI", icon: <SiDaisyui className="text-3xl" /> },
-    { name: "JAVASCRIPT", icon: <SiJavascript className="text-3xl" /> },
-    { name: "HTML & CSS", icon: <FaHtml5 className="text-3xl" /> },
-    { name: "EXPRESS.JS", icon: <SiExpress className="text-3xl" /> },
-    { name: "WORDPRESS", icon: <FaWordpress className="text-3xl" /> },
-    { name: "GIT & GITHUB", icon: <FaGitAlt className="text-3xl" /> },
+    { name: "React", icon: <FaReact className="text-2xl" />, color: "text-cyan-500" },
+    { name: "Next.js", icon: <SiNextdotjs className="text-2xl" />, color: "text-gray-900 dark:text-white" },
+    { name: "Python", icon: <FaPython className="text-2xl" />, color: "text-blue-500" },
+    { name: "JavaScript", icon: <SiJavascript className="text-2xl" />, color: "text-yellow-500" },
+    { name: "TypeScript", icon: <SiTypescript className="text-2xl" />, color: "text-blue-600" },
+    { name: "Node.js", icon: <FaNodeJs className="text-2xl" />, color: "text-green-600" },
+    { name: "Tailwind", icon: <SiTailwindcss className="text-2xl" />, color: "text-cyan-500" },
+    { name: "MongoDB", icon: <SiMongodb className="text-2xl" />, color: "text-green-500" },
+    { name: "PostgreSQL", icon: <SiPostgresql className="text-2xl" />, color: "text-blue-700" },
+    { name: "Redis", icon: <SiRedis className="text-2xl" />, color: "text-red-600" },
+    { name: "Docker", icon: <SiDocker className="text-2xl" />, color: "text-blue-500" },
+    { name: "Express", icon: <SiExpress className="text-2xl" />, color: "text-gray-600" },
+    { name: "HTML", icon: <FaHtml5 className="text-2xl" />, color: "text-orange-500" },
+    { name: "Git", icon: <FaGitAlt className="text-2xl" />, color: "text-orange-600" },
+    { name: "Database", icon: <FaDatabase className="text-2xl" />, color: "text-purple-500" },
   ]
 
   return (
-    <div className="w-full py-8 bg-secondary overflow-hidden relative transform-gpu">
-      {/* 3D Depth Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent opacity-30" 
-           style={{ transform: "translateZ(-30px)" }} />
-      
-      {/* Floating Orbs for Depth */}
-      <div className="absolute top-0 left-1/4 w-64 h-64 rounded-full bg-primary/5 blur-3xl opacity-50" 
-           style={{ transform: "translateZ(-20px)" }} />
-      <div className="absolute bottom-0 right-1/3 w-48 h-48 rounded-full bg-accent/10 blur-3xl opacity-40" 
-           style={{ transform: "translateZ(20px)" }} />
-      
-      <Marquee speed={60} gradient={false} pauseOnHover={true}>
-        {skills.map((skill, index) => (
-          <div 
-            key={index} 
-            className="flex items-center gap-8 mx-4 transform-gpu"
-            style={{ transformStyle: "preserve-3d" }}
-          >
+    <div className="w-full py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden relative">
+      {/* Subtle Background Pattern */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgb(156 163 175 / 0.3) 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      {/* Section Label */}
+      <div className="relative z-10 mb-8 text-center">
+        <span className="text-xs font-semibold tracking-widest text-gray-400 dark:text-gray-500 uppercase">
+          Technologies I work with
+        </span>
+      </div>
+
+      {/* Marquee Container */}
+      <div className="relative z-10">
+        <Marquee 
+          speed={40} 
+          gradient={true} 
+          gradientColor={[249, 250, 251]}
+          gradientWidth={200}
+          pauseOnHover={true}
+        >
+          {skills.map((skill, index) => (
             <div 
-              className="flex items-center gap-4 bg-primary/20 px-6 py-3 rounded-full backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl transform-gpu"
-              style={{ 
-                transform: "translateZ(0px)",
-                transformStyle: "preserve-3d"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateZ(20px) scale(1.05)";
-                e.currentTarget.style.background = "rgba(var(--primary), 0.3)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateZ(0px) scale(1)";
-                e.currentTarget.style.background = "rgba(var(--primary), 0.2)";
-              }}
+              key={index}
+              className="flex items-center gap-2 md:gap-3 mx-6 md:mx-8 group"
             >
-              {/* 3D Icon Container */}
-              <div 
-                className="relative transition-transform duration-300"
-                style={{ 
-                  transform: "translateZ(15px)",
-                  transformStyle: "preserve-3d"
-                }}
-              >
-                <span className="text-primary dark:text-primary relative z-10">{skill.icon}</span>
-                {/* Icon Glow Effect */}
-                <div className="absolute inset-0 bg-current blur-lg opacity-30" 
-                     style={{ transform: "translateZ(-10px)" }} />
+              <div className="flex items-center gap-3 px-5 py-3 bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300">
+                <div className={`${skill.color} opacity-80 group-hover:opacity-100 transition-opacity duration-300`}>
+                  {skill.icon}
+                </div>
+                <span className="text-sm md:text-base font-medium text-gray-700 dark:text-gray-300 tracking-wide group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
+                  {skill.name}
+                </span>
               </div>
               
-              <span className="text-primary dark:text-primary font-bold text-xl whitespace-nowrap uppercase tracking-wide relative"
-                    style={{ transform: "translateZ(10px)" }}>
-                {skill.name}
-              </span>
+              {/* Minimalist Divider */}
+              <div className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-gray-400 dark:group-hover:bg-gray-500 transition-colors duration-300" />
             </div>
-            
-            {/* 3D Decorative Element */}
-            <span 
-              className="text-primary dark:text-primary text-2xl relative transition-transform duration-300"
-              style={{ 
-                transform: "translateZ(25px)",
-                transformStyle: "preserve-3d"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateZ(40px) scale(1.2)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateZ(25px) scale(1)";
-              }}
+          ))}
+        </Marquee>
+
+        {/* Second Marquee for seamless loop */}
+        <Marquee 
+          speed={40} 
+          gradient={true} 
+          gradientColor={[249, 250, 251]}
+          gradientWidth={200}
+          pauseOnHover={true}
+          direction="right"
+          className="mt-6"
+        >
+          {skills.map((skill, index) => (
+            <div 
+              key={`reverse-${index}`}
+              className="flex items-center gap-2 md:gap-3 mx-6 md:mx-8 group"
             >
-              ✦
-              {/* Glow effect for decorative element */}
-              <span className="absolute inset-0 text-current blur-md opacity-50" 
-                    style={{ transform: "translateZ(-15px)" }}>✦</span>
-            </span>
-          </div>
-        ))}
-      </Marquee>
-      
-      {/* Subtle Edge Highlights */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-px bg-white/20" 
-             style={{ transform: "translateZ(30px)" }} />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-black/10 dark:bg-white/10" 
-             style={{ transform: "translateZ(-30px)" }} />
+              <div className="flex items-center gap-3 px-5 py-3 bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300">
+                <div className={`${skill.color} opacity-80 group-hover:opacity-100 transition-opacity duration-300`}>
+                  {skill.icon}
+                </div>
+                <span className="text-sm md:text-base font-medium text-gray-700 dark:text-gray-300 tracking-wide group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300">
+                  {skill.name}
+                </span>
+              </div>
+              
+              {/* Minimalist Divider */}
+              <div className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-gray-400 dark:group-hover:bg-gray-500 transition-colors duration-300" />
+            </div>
+          ))}
+        </Marquee>
       </div>
+
+      {/* Decorative Lines */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent" />
     </div>
   )
 }
