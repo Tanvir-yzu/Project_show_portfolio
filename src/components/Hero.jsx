@@ -104,11 +104,11 @@ function Hero() {
                 hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
               }}
-              className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 dark:text-white leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 dark:text-white leading-tight"
             >
               Hi, I'm <span className="text-gradient">Tanvir</span>
               <br />
-              <span className="text-3xl md:text-4xl lg:text-5xl text-gray-700 dark:text-gray-300">
+              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-700 dark:text-gray-300">
                 Full-Stack Developer
               </span>
             </motion.h1>
@@ -130,19 +130,19 @@ function Hero() {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
               }}
-              className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4"
+              className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start pt-4"
             >
               <motion.button
                 onClick={() => scrollToSection('contact')}
-                className="group relative bg-gradient-to-r from-secondary to-accent text-primary font-semibold px-8 py-4 rounded-2xl shadow-xl overflow-hidden"
-                whileHover={{ 
+                className="group relative bg-gradient-to-r from-secondary to-accent text-primary font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-2xl shadow-xl overflow-hidden min-h-[48px]"
+                whileHover={{
                   scale: 1.05,
                   boxShadow: '0 20px 40px rgba(174, 255, 114, 0.3)',
                 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-                <span className="relative flex items-center gap-2">
+                <span className="relative flex items-center gap-2 text-sm sm:text-base">
                   Get In Touch
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </span>
@@ -150,14 +150,14 @@ function Hero() {
 
               <motion.button
                 onClick={() => scrollToSection('projects')}
-                className="group relative bg-white dark:bg-white/10 text-gray-900 dark:text-white font-semibold px-8 py-4 rounded-2xl shadow-lg border-2 border-gray-200 dark:border-white/20 overflow-hidden"
-                whileHover={{ 
+                className="group relative bg-white dark:bg-white/10 text-gray-900 dark:text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-2xl shadow-lg border-2 border-gray-200 dark:border-white/20 overflow-hidden min-h-[48px]"
+                whileHover={{
                   scale: 1.05,
                   borderColor: 'rgba(174, 255, 114, 0.5)',
                 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <span className="relative flex items-center gap-2">
+                <span className="relative flex items-center gap-2 text-sm sm:text-base">
                   View Projects
                   <FaArrowRight className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                 </span>
@@ -170,35 +170,35 @@ function Hero() {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
               }}
-              className="flex items-center gap-4 justify-center lg:justify-start pt-4"
+              className="flex items-center gap-3 sm:gap-4 justify-center lg:justify-start pt-4"
             >
               <motion.a
                 href="https://github.com/Tanvir-yzu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white dark:bg-white/10 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="p-3 sm:p-3 bg-white dark:bg-white/10 rounded-xl shadow-lg hover:shadow-xl transition-all min-h-[44px] min-w-[44px] flex items-center justify-center"
                 whileHover={{ scale: 1.1, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaGithub className="text-xl text-gray-700 dark:text-gray-300" />
+                <FaGithub className="text-lg sm:text-xl text-gray-700 dark:text-gray-300" />
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/tanvir-yzu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white dark:bg-white/10 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="p-3 sm:p-3 bg-white dark:bg-white/10 rounded-xl shadow-lg hover:shadow-xl transition-all min-h-[44px] min-w-[44px] flex items-center justify-center"
                 whileHover={{ scale: 1.1, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaLinkedin className="text-xl text-gray-700 dark:text-gray-300" />
+                <FaLinkedin className="text-lg sm:text-xl text-gray-700 dark:text-gray-300" />
               </motion.a>
               <motion.a
                 href="mailto:2020tanvir1971@gmail.com.com"
-                className="p-3 bg-white dark:bg-white/10 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="p-3 sm:p-3 bg-white dark:bg-white/10 rounded-xl shadow-lg hover:shadow-xl transition-all min-h-[44px] min-w-[44px] flex items-center justify-center"
                 whileHover={{ scale: 1.1, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaEnvelope className="text-xl text-gray-700 dark:text-gray-300" />
+                <FaEnvelope className="text-lg sm:text-xl text-gray-700 dark:text-gray-300" />
               </motion.a>
             </motion.div>
           </motion.div>

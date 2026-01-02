@@ -1,4 +1,4 @@
-import { FaGithub, FaExternalLinkAlt, FaCode, FaGlobe } from "react-icons/fa"
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import { motion, useInView } from "framer-motion"
@@ -172,12 +172,16 @@ const Projects = () => {
         {/* Projects Swiper */}
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={24}
+          spaceBetween={20}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true, dynamicBullets: true }}
           autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
           breakpoints={{
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 16,
+            },
             640: {
               slidesPerView: 1,
               spaceBetween: 20,

@@ -156,7 +156,7 @@ const Skills = () => {
               </motion.div>
 
               {/* Skills Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
                 {category.skills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
@@ -240,7 +240,7 @@ const Skills = () => {
 
         {/* Stats Section */}
         <motion.div
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -253,24 +253,24 @@ const Skills = () => {
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
-              className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-6 rounded-2xl text-center border border-gray-200 dark:border-gray-700"
+              className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-4 sm:p-6 rounded-2xl text-center border border-gray-200 dark:border-gray-700"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
-              whileHover={{ 
+              whileHover={{
                 y: -5,
                 boxShadow: '0 20px 40px rgba(174, 255, 114, 0.2)',
               }}
             >
               <motion.div
-                className="text-3xl md:text-4xl font-bold text-gradient mb-2"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-gradient mb-2"
                 initial={{ scale: 0 }}
                 animate={isInView ? { scale: 1 } : { scale: 0 }}
                 transition={{ duration: 0.5, delay: 1.1 + index * 0.1, type: "spring" }}
               >
                 {stat.number}
               </motion.div>
-              <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+              <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium">
                 {stat.label}
               </div>
             </motion.div>

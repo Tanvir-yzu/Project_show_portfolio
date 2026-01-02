@@ -41,29 +41,29 @@ const Footer = () => {
                 href="https://github.com/Tanvir-yzu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-secondary/50 transition-all duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-secondary/50 transition-all duration-300 min-h-[44px] min-w-[44px]"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaGithub className="text-lg" />
+                <FaGithub className="text-lg sm:text-xl" />
               </motion.a>
               <motion.a
                 href="https://www.linkedin.com/in/tanvir-yzu/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-secondary/50 transition-all duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-secondary/50 transition-all duration-300 min-h-[44px] min-w-[44px]"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaLinkedin className="text-lg" />
+                <FaLinkedin className="text-lg sm:text-xl" />
               </motion.a>
               <motion.a
                 href="mailto:2020tanvir1971@gmail.com"
-                className="w-10 h-10 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-secondary/50 transition-all duration-300"
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-secondary/50 transition-all duration-300 min-h-[44px] min-w-[44px]"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <FaEnvelope className="text-lg" />
+                <FaEnvelope className="text-lg sm:text-xl" />
               </motion.a>
             </div>
           </div>
@@ -166,7 +166,7 @@ const Footer = () => {
             </p>
             <motion.a
               href="mailto:2020tanvir1971@gmail.com"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-secondary to-accent text-gray-900 font-semibold rounded-xl hover:shadow-lg hover:shadow-secondary/25 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 bg-gradient-to-r from-secondary to-accent text-gray-900 font-semibold rounded-xl hover:shadow-lg hover:shadow-secondary/25 transition-all duration-300 min-h-[48px]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -206,14 +206,14 @@ const Footer = () => {
       {/* Back to Top Button */}
       <motion.button
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-secondary to-accent text-gray-900 rounded-full shadow-lg shadow-secondary/25 flex items-center justify-center z-50"
+        className="fixed bottom-6 sm:bottom-8 right-6 sm:right-8 w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-r from-secondary to-accent text-gray-900 rounded-full shadow-lg shadow-secondary/25 flex items-center justify-center z-50 min-h-[48px] min-w-[48px]"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         whileHover={{ scale: 1.1, y: -4 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Back to top"
       >
-        <FaArrowUp className="text-lg" />
+        <FaArrowUp className="text-lg sm:text-xl" />
       </motion.button>
     </footer>
   )

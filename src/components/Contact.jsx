@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaPhone, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { FaMapMarkerAlt, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa"
 import { useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
@@ -87,45 +87,45 @@ const Contact = () => {
             </motion.p>
           </div>
 
-          <motion.div 
+          <motion.div
             className="space-y-6 pt-4"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <motion.div 
+            <motion.div
               className="flex items-start gap-4"
               whileHover={{ x: 10 }}
               transition={{ duration: 0.3 }}
             >
-              <motion.div 
-                className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0"
+              <motion.div
+                className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 min-h-[48px] min-w-[48px]"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
-                <FaMapMarkerAlt className="text-secondary text-xl" />
+                <FaMapMarkerAlt className="text-secondary text-xl sm:text-xl" />
               </motion.div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">Address</h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1">Address</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">
                   Yangzhou City,<br />China
                 </p>
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="flex items-start gap-4"
               whileHover={{ x: 10 }}
               transition={{ duration: 0.3 }}
             >
-              <motion.div 
-                className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0"
+              <motion.div
+                className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary/20 rounded-full flex items-center justify-center flex-shrink-0 min-h-[48px] min-w-[48px]"
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
-                <FaPhone className="text-secondary text-xl" />
+                <FaPhone className="text-secondary text-xl sm:text-xl" />
               </motion.div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">Phone Number</h3>
-                <p className="text-gray-600 dark:text-gray-400">+86 18252737084</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1">Phone Number</h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base">+86 18252737084</p>
               </div>
             </motion.div>
           </motion.div>
@@ -181,58 +181,58 @@ const Contact = () => {
             <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio" />
             <input type="hidden" name="_captcha" value="false" />
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div>
-                <label className="block text-sm text-gray-400 mb-2">First Name</label>
-                <input 
-                  type="text" 
+                <label className="block text-sm sm:text-sm text-gray-400 mb-2">First Name</label>
+                <input
+                  type="text"
                   name="First Name"
                   required
-                  className="w-full px-4 py-3 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary transition-all" 
+                  className="w-full px-4 py-3 sm:py-3.5 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary transition-all min-h-[52px] text-base sm:text-base"
                   placeholder="John"
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Last Name</label>
-                <input 
-                  type="text" 
+                <label className="block text-sm sm:text-sm text-gray-400 mb-2">Last Name</label>
+                <input
+                  type="text"
                   name="Last Name"
                   required
-                  className="w-full px-4 py-3 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary transition-all" 
+                  className="w-full px-4 py-3 sm:py-3.5 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary transition-all min-h-[52px] text-base sm:text-base"
                   placeholder="Doe"
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Email</label>
-                <input 
-                  type="email" 
+                <label className="block text-sm sm:text-sm text-gray-400 mb-2">Email</label>
+                <input
+                  type="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary transition-all" 
+                  className="w-full px-4 py-3 sm:py-3.5 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary transition-all min-h-[52px] text-base sm:text-base"
                   placeholder="john@example.com"
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-400 mb-2">Phone Number</label>
-                <input 
-                  type="tel" 
+                <label className="block text-sm sm:text-sm text-gray-400 mb-2">Phone Number</label>
+                <input
+                  type="tel"
                   name="Phone Number"
-                  className="w-full px-4 py-3 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary transition-all" 
+                  className="w-full px-4 py-3 sm:py-3.5 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary transition-all min-h-[52px] text-base sm:text-base"
                   placeholder="+880 1234-567890"
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm text-gray-400 mb-2">Message</label>
-              <textarea 
-                rows="5" 
+              <label className="block text-sm sm:text-sm text-gray-400 mb-2">Message</label>
+              <textarea
+                rows="5"
                 name="message"
                 required
-                className="w-full px-4 py-3 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary resize-none transition-all" 
+                className="w-full px-4 py-3 sm:py-3.5 bg-[#0f2828] border border-gray-700 rounded-lg text-white outline-none focus:border-primary resize-none transition-all min-h-[140px] text-base sm:text-base"
                 placeholder="Your message here..."
               ></textarea>
             </div>
@@ -243,10 +243,10 @@ const Contact = () => {
               </div>
             )}
 
-            <motion.button 
-              type="submit" 
+            <motion.button
+              type="submit"
               disabled={isSubmitting}
-              className="bg-secondary text-primary font-bold px-8 py-4 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full sm:w-auto bg-secondary text-primary font-bold px-8 py-4 rounded-full disabled:opacity-50 disabled:cursor-not-allowed min-h-[52px]"
               whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(174, 255, 114, 0.3)" }}
               whileTap={{ scale: 0.95 }}
             >
@@ -257,31 +257,31 @@ const Contact = () => {
       </div>
 
       {/* Social Links */}
-      <motion.div 
+      <motion.div
         className="flex justify-center gap-4 mt-16"
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <motion.a 
-          href="https://github.com/Tanvir-yzu" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
+        <motion.a
+          href="https://github.com/Tanvir-yzu"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 sm:w-14 sm:h-14 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg min-h-[48px] min-w-[48px]"
           whileHover={{ scale: 1.2, backgroundColor: "#AEFF72", color: "#0D2426" }}
           whileTap={{ scale: 0.9 }}
         >
-          <FaGithub className="text-xl" />
+          <FaGithub className="text-xl sm:text-2xl" />
         </motion.a>
-        <motion.a 
-          href="https://www.linkedin.com/in/tanvir-yzu/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg"
+        <motion.a
+          href="https://www.linkedin.com/in/tanvir-yzu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 sm:w-14 sm:h-14 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg min-h-[48px] min-w-[48px]"
           whileHover={{ scale: 1.2, backgroundColor: "#AEFF72", color: "#0D2426" }}
           whileTap={{ scale: 0.9 }}
         >
-          <FaLinkedin className="text-xl" />
+          <FaLinkedin className="text-xl sm:text-2xl" />
         </motion.a>
       </motion.div>
     </section>

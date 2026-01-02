@@ -43,7 +43,7 @@ function Header() {
   const navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact']
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-999 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/95 dark:bg-primary/95 backdrop-blur-xl shadow-lg py-3' 
         : 'bg-transparent py-4 md:py-6'
@@ -106,19 +106,19 @@ function Header() {
               <span className="sm:hidden">CV</span>
             </motion.a>
 
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="lg:hidden p-2 sm:p-2.5 rounded-xl bg-gray-100 dark:bg-white/10"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-            >
-              {isMobileMenuOpen ? (
-                <MdClose className={`text-xl sm:text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
-              ) : (
-                <MdMenu className={`text-xl sm:text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
-              )}
-            </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="lg:hidden p-3 sm:p-4 rounded-xl bg-gray-100 dark:bg-white/10 min-h-[44px] min-w-[44px]"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+              >
+                {isMobileMenuOpen ? (
+                  <MdClose className={`text-2xl sm:text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
+                ) : (
+                  <MdMenu className={`text-2xl sm:text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
+                )}
+              </motion.button>
           </div>
         </nav>
       </div>
@@ -139,20 +139,20 @@ function Header() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: '100%' }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[80vw] max-w-sm bg-white dark:bg-primary shadow-2xl z-50 lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-[85vw] sm:w-[80vw] max-w-sm bg-white dark:bg-primary shadow-2xl z-50 lg:hidden overflow-y-auto"
             >
-              <div className="p-4 sm:p-6">
+              <div className="p-6 sm:p-8">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="p-2 sm:p-2.5 rounded-xl bg-gray-100 dark:bg-white/10 ml-auto flex mb-6 sm:mb-8"
+                  className="p-3 sm:p-4 rounded-xl bg-gray-100 dark:bg-white/10 ml-auto flex mb-8 min-h-[44px] min-w-[44px]"
                   onClick={() => setIsMobileMenuOpen(false)}
                   aria-label="Close menu"
                 >
-                  <MdClose className="text-xl sm:text-2xl text-primary dark:text-white" />
+                  <MdClose className="text-2xl sm:text-2xl text-primary dark:text-white" />
                 </motion.button>
 
-                <div className="flex flex-col space-y-1.5 sm:space-y-2">
+                <div className="flex flex-col space-y-2">
                   {navItems.map((item, index) => (
                     <motion.button
                       key={item}
@@ -160,7 +160,7 @@ function Header() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.05 }}
                       onClick={() => scrollToSection(item.toLowerCase())}
-                      className={`text-base sm:text-lg font-medium px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl transition-all text-left w-full text-left ${
+                      className={`text-lg sm:text-lg font-medium px-4 sm:px-4 py-3.5 sm:py-3 rounded-xl transition-all text-left w-full text-left min-h-[52px] flex items-center ${
                         activeSection === item.toLowerCase()
                           ? 'bg-gradient-to-r from-secondary/20 to-accent/20 text-primary dark:text-white'
                           : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5'
