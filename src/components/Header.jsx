@@ -43,9 +43,9 @@ function Header() {
   const navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact']
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-999 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 dark:bg-primary/95 backdrop-blur-xl shadow-lg py-3' 
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled
+        ? 'bg-white/95 dark:bg-primary/95 backdrop-blur-xl shadow-lg py-3'
         : 'bg-transparent py-4 md:py-6'
     }`}>
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
@@ -139,7 +139,7 @@ function Header() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: '100%' }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-[85vw] sm:w-[80vw] max-w-sm bg-white dark:bg-primary shadow-2xl z-50 lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-[85vw] sm:w-[80vw] max-w-sm bg-white dark:bg-primary shadow-2xl z-[60] lg:hidden overflow-y-auto"
             >
               <div className="p-6 sm:p-8">
                 <motion.button
