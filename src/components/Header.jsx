@@ -45,20 +45,20 @@ function Header() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/90 dark:bg-primary/90 backdrop-blur-xl shadow-lg py-3' 
-        : 'bg-transparent py-6'
+        ? 'bg-white/95 dark:bg-primary/95 backdrop-blur-xl shadow-lg py-3' 
+        : 'bg-transparent py-4 md:py-6'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+        <nav className="flex justify-between items-center h-14 md:h-auto">
           <motion.div 
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 sm:space-x-3"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center">
-              <span className="text-primary font-bold text-xl">T</span>
+            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center shadow-md">
+              <span className="text-primary font-bold text-lg sm:text-xl">T</span>
             </div>
-            <span className={`text-2xl font-display font-bold ${
+            <span className={`text-xl sm:text-2xl font-display font-bold ${
               isScrolled 
                 ? 'text-primary dark:text-white' 
                 : 'text-primary dark:text-white'
@@ -67,14 +67,14 @@ function Header() {
             </span>
           </motion.div>
 
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex items-center space-x-0.5 sm:space-x-1">
             {navItems.map((item) => (
               <motion.button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className={`relative font-medium px-5 py-2.5 rounded-xl transition-all ${
+                className={`relative font-medium px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl transition-all ${
                   activeSection === item.toLowerCase()
                     ? 'text-primary dark:text-white'
                     : 'text-gray-600 dark:text-gray-400'
@@ -87,34 +87,36 @@ function Header() {
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
-                <span className="relative z-10">{item}</span>
+                <span className="relative z-10 text-sm sm:text-base">{item}</span>
               </motion.button>
             ))}
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="hidden md:flex items-center gap-2 bg-gradient-to-r from-secondary to-accent text-primary font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all"
+              className="hidden md:flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-secondary to-accent text-primary font-semibold px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all text-sm sm:text-base"
               href="https://drive.google.com/file/d/1rwUxRcPc-CSez_yOVXzG8ShE-YeRyXp-/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MdDownload className="text-lg" />
-              Download CV
+              <MdDownload className="text-base sm:text-lg" />
+              <span className="hidden sm:inline">Download CV</span>
+              <span className="sm:hidden">CV</span>
             </motion.a>
 
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="lg:hidden p-2.5 rounded-xl bg-gray-100 dark:bg-white/10"
+              className="lg:hidden p-2 sm:p-2.5 rounded-xl bg-gray-100 dark:bg-white/10"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {isMobileMenuOpen ? (
-                <MdClose className={`text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
+                <MdClose className={`text-xl sm:text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
               ) : (
-                <MdMenu className={`text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
+                <MdMenu className={`text-xl sm:text-2xl ${isScrolled ? 'text-primary' : 'text-primary dark:text-white'}`} />
               )}
             </motion.button>
           </div>
@@ -128,6 +130,7 @@ function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
@@ -136,19 +139,20 @@ function Header() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: '100%' }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 h-full w-72 bg-white dark:bg-primary shadow-2xl z-50 lg:hidden"
+              className="fixed top-0 right-0 h-full w-[80vw] max-w-sm bg-white dark:bg-primary shadow-2xl z-50 lg:hidden overflow-y-auto"
             >
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  className="p-2 rounded-xl bg-gray-100 dark:bg-white/10 ml-auto flex mb-8"
+                  className="p-2 sm:p-2.5 rounded-xl bg-gray-100 dark:bg-white/10 ml-auto flex mb-6 sm:mb-8"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  aria-label="Close menu"
                 >
-                  <MdClose className="text-2xl text-primary dark:text-white" />
+                  <MdClose className="text-xl sm:text-2xl text-primary dark:text-white" />
                 </motion.button>
 
-                <div className="flex flex-col space-y-2">
+                <div className="flex flex-col space-y-1.5 sm:space-y-2">
                   {navItems.map((item, index) => (
                     <motion.button
                       key={item}
@@ -156,7 +160,7 @@ function Header() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.05 }}
                       onClick={() => scrollToSection(item.toLowerCase())}
-                      className={`text-lg font-medium px-4 py-3 rounded-xl transition-all text-left ${
+                      className={`text-base sm:text-lg font-medium px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl transition-all text-left w-full text-left ${
                         activeSection === item.toLowerCase()
                           ? 'bg-gradient-to-r from-secondary/20 to-accent/20 text-primary dark:text-white'
                           : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/5'
@@ -173,13 +177,13 @@ function Header() {
                   transition={{ delay: 0.3 }}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex items-center justify-center gap-2 mt-8 bg-gradient-to-r from-secondary to-accent text-primary font-semibold px-6 py-3 rounded-xl shadow-lg"
+                  className="flex items-center justify-center gap-2 mt-6 sm:mt-8 bg-gradient-to-r from-secondary to-accent text-primary font-semibold px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl shadow-lg text-sm sm:text-base"
                   href="https://drive.google.com/file/d/1rwUxRcPc-CSez_yOVXzG8ShE-YeRyXp-/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <MdDownload className="text-xl" />
+                  <MdDownload className="text-lg sm:text-xl" />
                   Download CV
                 </motion.a>
               </div>

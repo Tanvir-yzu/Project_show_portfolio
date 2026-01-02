@@ -50,12 +50,12 @@ const Projects = () => {
       category: "EdTech"
     },
     {
-      title: "E-commerce Store",
-      description: "Full-stack e-commerce with shopping cart and payment integration.",
-      tech: ["Python", "Django", "JavaScripts"],
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-      github: "https://github.com/Tanvir-yzu/-Single-Vendor-E-Commerce-Project",
-      live: "https://tanvir-islam-portfolio.netlify.app/",
+      title: "Heart Disease Prediction",
+      description: "AI-powered heart disease prediction model with Django backend.",
+      tech: ["Python", "Streamlit", "AI/ML"],
+      image: "https://i.postimg.cc/23pNFyk0/Screenshot-2026-01-02-002810.png",
+      github: "https://github.com/Tanvir-yzu/Heart-Disease-Prediction-AI",
+      live: "https://heartdisea.streamlit.app/",
       category: "Full-Stack"
     },
     {
