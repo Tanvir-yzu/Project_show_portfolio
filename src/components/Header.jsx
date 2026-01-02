@@ -50,17 +50,18 @@ function Header() {
     }`}>
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <nav className="flex justify-between items-center h-14 md:h-auto">
-          <motion.div 
-            className="flex items-center space-x-2 sm:space-x-3"
+          <motion.div
+            className="flex items-center space-x-2 sm:space-x-3 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection('home')}
           >
             <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-secondary to-accent rounded-xl flex items-center justify-center shadow-md">
               <span className="text-primary font-bold text-lg sm:text-xl">T</span>
             </div>
             <span className={`text-xl sm:text-2xl font-display font-bold ${
-              isScrolled 
-                ? 'text-primary dark:text-white' 
+              isScrolled
+                ? 'text-primary dark:text-white'
                 : 'text-primary dark:text-white'
             }`}>
               Tanvir.
