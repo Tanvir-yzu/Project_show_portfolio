@@ -207,7 +207,7 @@ const About = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            Hi, I'm Tanvir, a passionate Full-Stack Developer who thrives on turning ideas into visually stunning realities. With a love for creativity and a meticulous eye for detail.
+            Hi, I'm <span className="text-secondary">Tanvir Islam</span>. My journey in <span className="text-secondary">Software Engineering</span> began with a solid foundation in software engineering, where I cultivated a deep understanding of <span className="text-secondary">algorithms, data structures,</span> and <span className="text-secondary">software architecture</span>. This knowledge has been instrumental in my ability to design robust and efficient software systems that meet the diverse needs of users and stakeholders.
           </motion.p>
 
           <motion.div 
